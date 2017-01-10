@@ -1,0 +1,28 @@
+// out: ../../public/styles/globalstyles.css, sourcemap: false, compress: true
+
+#todo-app-wrapper{background-color: #fafafa; padding: 15px; border: 1px solid #eee; border-radius: 5px;
+  .search-todo-wrapper{border-bottom:1px solid #eee; padding-bottom: 15px;
+    input{border:1px solid #eee; border-radius: 5px; padding: 5px;}
+    label{display: flex; align-items: center; margin-top: 10px; font-weight: 400;
+      &:hover{cursor: pointer;}
+      input{margin: 0 5px 0 0;}
+    }
+  }
+  p.message{margin:30px auto; color: #aaa;}
+
+  .todo-list{
+    .todo{display: flex; align-items: center; padding: 15px; transition: background .3s ease;
+      input, p{margin: 0;}
+      .todo-date{color: #999;}
+      &:hover{background-color: #f0f0f0; cursor: pointer;}
+      &.completed{text-decoration: line-through; color: #999;}
+      >:first-child{margin-right: 10px;}
+    }
+  }
+
+  .add-todo-wrapper{border-top: 1px solid #eee; padding-top: 15px;
+    input{border:1px solid #eee; border-radius: 5px; padding: 5px;}
+    button{margin-top: 5px;}
+  }
+  .delete-todo-wrapper{margin-top: 10px;}
+}

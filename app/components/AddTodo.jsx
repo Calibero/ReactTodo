@@ -1,4 +1,5 @@
 var React = require('react');
+var {Button, Row, Col} = require('react-bootstrap');
 
 var AddTodo = React.createClass({
   handleSubmit: function (e) {
@@ -14,12 +15,16 @@ var AddTodo = React.createClass({
   },
   render: function () {
     return (
-      <div>
+      <Row className="add-todo-wrapper">
         <form onSubmit={this.handleSubmit}>
-          <input type="text" ref="todoText" placeholder="what do you need to do" />
-          <button>Add Todo</button>
+          <Col xs={12}>
+            <input type="text" ref="todoText" placeholder="what do you need to do" className="col-xs-12" />
+          </Col>
+          <Col xs={12}>
+            <Button bsStyle="primary" type="submit" block>Add Todo</Button>
+          </Col>
         </form>
-      </div>
+      </Row>
     )
   }
 });

@@ -1,4 +1,5 @@
 var React = require('react');
+var {Row, Col} = require('react-bootstrap');
 
 var TodoSearch = React.createClass({
   handleSearch: function () {
@@ -9,17 +10,17 @@ var TodoSearch = React.createClass({
   },
   render: function () {
     return (
-      <div>
-        <div>
-          <input type="text" ref="searchText" placeholder="Search todos" onChange={this.handleSearch} />
-        </div>
-        <div>
+      <Row className="search-todo-wrapper">
+        <Col xs={12}>
+          <input type="text" ref="searchText" placeholder="Search todos" onChange={this.handleSearch} className="col-xs-12" />
+        </Col>
+        <Col xs={12}>
           <label>
             <input type="checkbox" ref="showCompleted" onChange={this.handleSearch} />
             Show completed todos
           </label>
-        </div>
-      </div>
+        </Col>
+      </Row>
     )
   }
 });
