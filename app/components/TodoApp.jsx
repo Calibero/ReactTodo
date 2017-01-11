@@ -4,7 +4,8 @@ var {Grid, Row, Col} = require('react-bootstrap');
 
 import TodoList from 'TodoList';
 import AddTodo from 'AddTodo';
-var TodoSearch = require('TodoSearch');
+import TodoSearch from 'TodoSearch';
+
 var TodoAPI = require('TodoAPI');
 var uuid = require('node-uuid');
 var DeleteTodos = require('DeleteTodos');
