@@ -4,19 +4,19 @@ var moment = require('moment');
 export var searchTextReducer = (state = '', action) => {
   switch (action.type) {
     case 'SET_SEARCH_TEXT':
-      return action.searchText;
+      return action.searchText
     default:
-      return state;
+      return state
   };
 }
 
 export var showCompletedReducer = (state = false, action) => {
   switch (action.type) {
     case 'TOGGLE_SHOW_COMPLETED':
-      return !state;
+      return !state
     default:
-      return state;
-  };
+        return state
+  }
 };
 
 export var todosReducer = (state = [], action) => {
@@ -31,7 +31,7 @@ export var todosReducer = (state = [], action) => {
           createdAt: moment().unix(),
           completedAt: undefined
         }
-      ];
+      ]
     case 'TOGGLE_TODO':
       return state.map((todo) => {
         if (todo.id === action.id) {
@@ -45,6 +45,6 @@ export var todosReducer = (state = [], action) => {
         }
       });
     default:
-      return state;
+      return state
   };
 };
