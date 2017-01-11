@@ -1,9 +1,13 @@
 var React = require('react');
+var {connect} = require('react-redux');
+var actions = require('actions');
 var {Button, Row, Col} = require('react-bootstrap');
 
-var DeleteTodos = React.createClass({
+export var DeleteTodos = React.createClass({
   handleDelete: function () {
-    this.props.onDeleteTodos(true);
+    var {dispatch} = this.props;
+    dispatch(actions.deleteTodos());
+
   },
   render: function () {
     return (
@@ -16,4 +20,4 @@ var DeleteTodos = React.createClass({
   }
 });
 
-module.exports = DeleteTodos;
+export default connect()(DeleteTodos);

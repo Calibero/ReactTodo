@@ -26,6 +26,12 @@ export var addTodos = (todos) => {
   };
 };
 
+export var deleteTodos = () => {
+  return {
+    type: 'DELETE_TODOS'
+  }
+}
+
 // toggleTodo(id) TOGGLE_TODO
 export var toggleTodo = (id) => {
   return {

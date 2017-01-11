@@ -5,9 +5,9 @@ var {Grid, Row, Col} = require('react-bootstrap');
 import TodoList from 'TodoList';
 import AddTodo from 'AddTodo';
 import TodoSearch from 'TodoSearch';
+import DeleteTodos from 'DeleteTodos';
 
 var uuid = require('node-uuid');
-var DeleteTodos = require('DeleteTodos');
 
 var TodoApp = React.createClass({
   render: function () {
@@ -22,7 +22,7 @@ var TodoApp = React.createClass({
               <TodoSearch/>
               <TodoList/>
               <AddTodo/>
-              <DeleteTodos onDeleteTodos={this.handleDeleteTodos} />
+              <DeleteTodos/>
             </Col>
           </Row>
         </Grid>
