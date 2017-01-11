@@ -26,7 +26,7 @@ module.exports = {
       './app/api'
     ],
     alias: {
-
+      actions: 'app/actions/actions.jsx'
     },
     extensions: ['', '.js', '.jsx']
   },
